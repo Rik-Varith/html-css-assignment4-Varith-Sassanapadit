@@ -1,0 +1,50 @@
+/**
+  We decided to setup the variable file for you for the Milestone 2 section. You will, however, be expected to do this on your own
+  in the Certification Project, and in Milestone 3 (receiving a style-guide.md and translate this to variables.css) 
+  Note: you can reference these variables with var(<variable name>) in the particular
+  CSS file you import this into (typically style.css). For example, var(--clr-lightRed) is using hsl(330, 100%, 98%)
+**/
+
+/** Font Imports **/
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-display: swap;
+  src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
+
+/*
+  CSS Variables
+*/
+:root {
+  /* Layout */
+  --width-mobile: 375px;
+  --width-desktop: 1440;
+
+  /* Colours */
+  --clr-lightRed: hsl(0, 100%, 67%);
+  --clr-orangeYellow: hsl(39, 100%, 56%);
+  --clr-greenTeal: hsl(166, 100%, 3%);
+  --clr-cobaltBlue: hsl(234, 85%, 45%);
+
+  /* Gradients */
+  --gra-lightSlateBlue: hsl(252, 100%, 67%); /* Background */
+  --gra-lightRoyalBlue: hsl(241, 81%, 54%); /* Background */
+
+  --gra-violetBlue: hsl(256, 72%, 46%, 1); /* Circle */
+  --gra-persianBlue: hsl(241%, 72%, 46%, 0); /* Circle */
+
+  /* Neutral Colours */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-paleBlue: hsl(221, 100%, 96%);
+  --clr-lightLavender: hsl(241, 100%, 89%);
+  --clr-darkGrayBlue: hsl(224, 30%, 27%);
+
+  /* Typography */
+  --font-paragraph: 18px;
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fw-black: 800;
+
+  /* Fonts */
+  --fs-base: 'Hanken Grotesk';
+}
