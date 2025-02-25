@@ -47,7 +47,215 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /** Your CSS Below **/
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fs-base);
+  background-color: var(--clr-paleBlue);
+}
+
+.results-container {
+  display: flex;
+  background-color: var(--clr-white);
+  border-radius: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 736px;
+}
+
+.results {
+  background: linear-gradient(var(--gra-lightSlateBlue), var(--gra-lightRoyalBlue));
+  color: var(--clr-white);
+  text-align: center;
+  padding: 2rem;
+  border-radius: 2rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.results h1 {
+  color: var(--clr-lightLavender);  /* This makes it light purple */
+}
+
+.score-circle {
+  background: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1), 
+    hsla(241, 72%, 46%, 0)  
+    /* More visible circle, variable colour isn't visible on hsl*/
+  );
+  border-radius: 50%;
+  width: 180px;   
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5 rem;
+}
+
+.score {
+  font-size: 4.5rem;
+  font-weight: var(--fw-black);
+  color: var(--clr-paleBlue);
+  line-height: 1;
+}
+
+.total {
+  color: var(--clr-lightLavender);
+  opacity: 85;
+}
+.results {
+  background: linear-gradient(
+    to bottom,
+    var(--gra-lightSlateBlue),
+    var(--gra-lightRoyalBlue)
+  );
+  color: var(--clr-white);
+  text-align: center;
+  padding: 2rem;
+  border-radius: 2rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2 0 rem;
+  
+}
+.result-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.result-text p {
+  color: var(--clr-lightLavender);
+  font-size: var(--font-paragraph);
+  padding: 0 2rem;
+}
+
+.summary {
+  padding: 2rem;
+  width: 50%;
+}
+
+.summary h2 {
+  color: var(--clr-darkGrayBlue);
+  margin-bottom: 1.5rem;
+}
+
+.summary-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.item-name {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-weight: var(--fw-bold);
+}
+
+.reaction {
+  background-color: hsla(0, 100%, 67%, 0.1);
+}
+.reaction .item-name {
+  color: var(--clr-lightRed);
+}
+
+.memory {
+  background-color: hsla(39, 100%, 56%, 0.1);
+}
+.memory .item-name {
+  color: var(--clr-orangeYellow);
+}
+
+.verbal {
+  background-color: hsla(166, 100%, 37%, 0.1);
+}
+.verbal .item-name {
+  color: hsl(168, 99%, 36%); /*colour on variable not match with design*/
+}
+
+.visual {
+  background-color: hsla(234, 85%, 45%, 0.1);
+}
+.visual .item-name {
+  color: var(--clr-cobaltBlue); 
+}
+
+.item-score {
+  color: var(--clr-darkGrayBlue);
+  }
+
+.item-score bl {
+    color: var(--clr-darkGrayBlue);
+    font-weight: var(--fw-black);
+}
+.item-score l{
+  opacity: 75%;
+}
+
+.continue-btn {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: var(--clr-darkGrayBlue);
+  color: var(--clr-white);
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.continue-btn:hover {
+  background: linear-gradient(var(--gra-lightSlateBlue), var(--gra-lightRoyalBlue));
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 375px) {
+  .results-container {
+    flex-direction: column;
+    border-radius: 0;
+  }
+  
+  .results, .summary {
+    width: 100%;
+  }
+  
+  .results {
+    border-radius: 0 0 2rem 2rem;
+  }
+
+  .score-circle {
+    width: 140px;
+    height: 140px;
+  }
+
+  .score {
+    font-size: 3rem;
+  }
+}
 
 /** Attribution CSS **/
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+  margin-top: 2rem;
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
